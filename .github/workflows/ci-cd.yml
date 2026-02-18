@@ -78,7 +78,7 @@ jobs:
   testing:
     runs-on: ubuntu-latest
     env:
-      SECRET_KEY: ${{ env.SECRET_KEY }}
+      SECRET_KEY: ${{ env.SECRET }}
       DEBUG: ${{ env.DEBUG }}
       ALLOWED_HOSTS: ${{ env.ALLOWED_HOSTS }}
       DB_ENGINE: ${{ env.DB_ENGINE }}
@@ -108,7 +108,7 @@ jobs:
       - name: Установка python
         uses: actions/setup-python@v4
         with:
-          -python-version: 3.10
+          python-version: 3.10
 
       - name: Установить зависимости
         run: pip install -r requirements.txt
