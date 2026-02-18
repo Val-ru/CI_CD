@@ -76,7 +76,7 @@ on:
 
 jobs:
   testing:
-    runs-on: [master]
+    runs-on: ubuntu-latest
     env:
       SECRET_KEY: ${{ env.SECRET_KEY }}
       DEBUG: ${{ env.DEBUG }}
